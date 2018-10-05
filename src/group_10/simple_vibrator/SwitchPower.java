@@ -1,4 +1,4 @@
-package raijin.simple_vibrator;
+package group_10.simple_vibrator;
 
 import org.fourthline.cling.binding.annotations.*;
 

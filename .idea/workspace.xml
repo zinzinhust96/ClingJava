@@ -2,46 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1fc6cac-1daa-471f-8694-bb7e639749fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ClingJava.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ClingJava.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/MyApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/controllers/ActionExecutor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/controllers/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/controllers/ControllerInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/models/AudioMode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/models/services/AudioControl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/models/services/PlayMusic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/models/services/SwitchPower.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/views/DrawButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/views/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/raijin/audio_system/views/ViewInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/audio_system.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/dec_vol.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/device.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/high_vol.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/inc_vol.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/low_vol.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/med_vol.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/mute.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/now_playing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/pause.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/playing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/power.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/power_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/repeat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/repeat_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/shuffle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/images/stop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/musics/file0.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/musics/file1.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/musics/file2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/musics/file3.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/musics/file4.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/musics/file5.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raijin/simple_vibrator/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_10/simple_vibrator/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raijin/simple_vibrator/.idea/simple_vibrator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_10/simple_vibrator/.idea/simple_vibrator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raijin/simple_vibrator/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_10/simple_vibrator/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raijin/simple_vibrator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_10/simple_vibrator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raijin/simple_vibrator/SimpleVibratorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_10/simple_vibrator/SimpleVibratorClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raijin/simple_vibrator/SimpleVibratorServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_10/simple_vibrator/SimpleVibratorServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/raijin/simple_vibrator/SwitchPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/group_10/simple_vibrator/SwitchPower.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,12 +32,12 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="1" />
-          <entry key="java" value="2" />
+          <entry key="java" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="2" />
+          <entry key="JAVA" value="3" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -77,7 +46,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/raijin/simple_vibrator/SimpleVibratorClient.java">
+        <entry file="file://$PROJECT_DIR$/src/group_10/simple_vibrator/SimpleVibratorClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
@@ -85,11 +54,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/raijin/simple_vibrator/SimpleVibratorServer.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/group_10/simple_vibrator/SimpleVibratorServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="40" column="59" lean-forward="true" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+            <state relative-caret-position="374">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/group_10/simple_vibrator/SwitchPower.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -97,7 +75,14 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/group_10/simple_vibrator/SimpleVibratorServer.java" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="64" />
@@ -144,7 +129,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538710907419" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538711125701" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -159,7 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SimpleVibratorServer">
+  <component name="RunManager" selected="Application.SimpleVibratorServer (1)">
     <configuration name="MyApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="raijin.audio_system.MyApplication" />
       <module name="ClingJava" />
@@ -173,12 +158,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SimpleVibratorClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="group_10.simple_vibrator.SimpleVibratorClient" />
+      <module name="ClingJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="group_10.simple_vibrator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SimpleVibratorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="raijin.simple_vibrator.SimpleVibratorClient" />
       <module name="ClingJava" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="raijin.simple_vibrator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleVibratorServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="group_10.simple_vibrator.SimpleVibratorServer" />
+      <module name="ClingJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="group_10.simple_vibrator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -203,9 +214,13 @@
       <item itemvalue="Application.MyApplication" />
       <item itemvalue="Application.SimpleVibratorClient" />
       <item itemvalue="Application.SimpleVibratorServer" />
+      <item itemvalue="Application.SimpleVibratorClient (1)" />
+      <item itemvalue="Application.SimpleVibratorServer (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SimpleVibratorServer (1)" />
+        <item itemvalue="Application.SimpleVibratorClient (1)" />
         <item itemvalue="Application.SimpleVibratorServer" />
         <item itemvalue="Application.SimpleVibratorClient" />
         <item itemvalue="Application.MyApplication" />
@@ -264,17 +279,24 @@
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/raijin/simple_vibrator/SimpleVibratorClient.java">
+    <entry file="file://$PROJECT_DIR$/src/group_10/simple_vibrator/SimpleVibratorClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/raijin/simple_vibrator/SimpleVibratorServer.java">
+    <entry file="file://$PROJECT_DIR$/src/group_10/simple_vibrator/SimpleVibratorServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="40" column="59" lean-forward="true" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+        <state relative-caret-position="374">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/group_10/simple_vibrator/SwitchPower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
