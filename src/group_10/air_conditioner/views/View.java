@@ -14,7 +14,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class View implements Initializable, ViewInterface {
-    private static AirConditioner airConditioner;
+    private static AirConditioner airConditioner = new AirConditioner();
     private static Boolean isDeviceOn = true;
     private ControllerInterface controller;
 

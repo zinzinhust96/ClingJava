@@ -1,5 +1,6 @@
 package group_10.air_conditioner.controllers;
 
+import group_10.air_conditioner.services.TemperatureControl;
 import org.fourthline.cling.UpnpService;
 import org.fourthline.cling.UpnpServiceImpl;
 import org.fourthline.cling.binding.LocalServiceBindingException;
@@ -47,7 +48,7 @@ public class Controller implements ControllerInterface {
                 System.out.println("Air conditioner detected.");
                 device = remoteDevice;
                 upnpService.getControlPoint().execute(createPowerSwitchSubscriptionCallBack(getServiceById(device, Constants.SWITCH_POWER)));
-//                upnpService.getControlPoint().execute(createAudioControlSubscriptionCallBack(getServiceById(device, Constants.AUDIO_CONTROL)));
+                upnpService.getControlPoint().execute(createTemperatureControlSubscriptionCallBack(getServiceById(device, Constants.TEMPERATURE_CONTROL)));
             }
         }
 
@@ -66,7 +67,7 @@ public class Controller implements ControllerInterface {
                 System.out.println("Air conditioner detected.");
                 device = localDevice;
                 upnpService.getControlPoint().execute(createPowerSwitchSubscriptionCallBack(getServiceById(device, Constants.SWITCH_POWER)));
-//                upnpService.getControlPoint().execute(createAudioControlSubscriptionCallBack(getServiceById(device, Constants.AUDIO_CONTROL)));
+                upnpService.getControlPoint().execute(createTemperatureControlSubscriptionCallBack(getServiceById(device, Constants.TEMPERATURE_CONTROL)));
                 Executors.newSingleThreadScheduledExecutor().schedule(new Runnable() {
                     @Override
                     public void run() {
@@ -125,14 +126,14 @@ public class Controller implements ControllerInterface {
 
         LocalService<SwitchPower> switchPowerService = new AnnotationLocalServiceBinder().read(SwitchPower.class);
         switchPowerService.setManager(new DefaultServiceManager(switchPowerService, SwitchPower.class));
-//        LocalService<AudioControl> audioControlService = new AnnotationLocalServiceBinder().read(AudioControl.class);
-//        audioControlService.setManager(new DefaultServiceManager(audioControlService, AudioControl.class));
+        LocalService<TemperatureControl> tempControlService = new AnnotationLocalServiceBinder().read(TemperatureControl.class);
+        tempControlService.setManager(new DefaultServiceManager(tempControlService, TemperatureControl.class));
 
         return new LocalDevice(
                 identity, type, details, icon,
                 new LocalService[]{
                         switchPowerService,
-//                        audioControlService,
+                        tempControlService,
                 }
         );
     }
@@ -147,7 +148,7 @@ public class Controller implements ControllerInterface {
             @Override
             protected void established(GENASubscription genaSubscription) {
                 System.out.println("Power switch subscription created.");
-//                setPowerStatus(Constants.POWER_STATUS_DEFAULT);
+                setPowerStatus(Constants.POWER_STATUS_DEFAULT);
             }
 
             @Override
@@ -176,7 +177,7 @@ public class Controller implements ControllerInterface {
         };
     }
 
-    private SubscriptionCallback createAudioControlSubscriptionCallBack(Service service) {
+    private SubscriptionCallback createTemperatureControlSubscriptionCallBack(Service service) {
         return new SubscriptionCallback(service, Integer.MAX_VALUE) {
             @Override
             protected void failed(GENASubscription genaSubscription, UpnpResponse upnpResponse, Exception e, String s) {
@@ -185,9 +186,8 @@ public class Controller implements ControllerInterface {
 
             @Override
             protected void established(GENASubscription genaSubscription) {
-                System.out.println("Audio control subscription created.");
-//                setVolume(Constants.VOLUME_DEFAULT);
-//                setMode(AudioMode.NORMAL);
+                System.out.println("Temperature control subscription created.");
+                setTemperature(Constants.TEMPERATURE_DEFAULT);
             }
 
             @Override
