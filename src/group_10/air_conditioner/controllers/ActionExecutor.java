@@ -15,7 +15,7 @@ public class ActionExecutor {
         this.controller = controller;
     }
 
-    public void setPowerStatus(UpnpService upnpService, Service service, boolean value) {
+    synchronized public void setPowerStatus(UpnpService upnpService, Service service, boolean value) {
         ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction(Constants.SET_TARGET));
         getTargetInvocation.setInput(Constants.NEW_TARGET_VALUE, value);
         upnpService.getControlPoint().execute(
@@ -24,7 +24,7 @@ public class ActionExecutor {
                     @Override
                     public void success(ActionInvocation invocation) {
                         assert invocation.getOutput().length == 0;
-                        System.out.println("Successfully called set action!");
+                        System.out.println("Successfully called action setPowerStatus");
                     }
 
                     @Override
@@ -35,7 +35,7 @@ public class ActionExecutor {
         );
     }
 
-    public void setTemperature(UpnpService upnpService, Service service, int value) {
+    synchronized public void setTemperature(UpnpService upnpService, Service service, int value) {
         ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction(Constants.SET_TEMPERATURE));
         getTargetInvocation.setInput(Constants.IN, value);
         upnpService.getControlPoint().execute(
@@ -44,7 +44,7 @@ public class ActionExecutor {
                     @Override
                     public void success(ActionInvocation invocation) {
                         assert invocation.getOutput().length == 0;
-                        System.out.println("Successfully called set action!");
+                        System.out.println("Successfully called action setTemperature");
                     }
 
                     @Override
@@ -55,7 +55,7 @@ public class ActionExecutor {
         );
     }
 
-    public void increaseTemperature(UpnpService upnpService, Service service) {
+    synchronized public void increaseTemperature(UpnpService upnpService, Service service) {
         ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction(Constants.INCREASE_TEMPERATURE));
         upnpService.getControlPoint().execute(
                 new ActionCallback(getTargetInvocation) {
@@ -63,7 +63,7 @@ public class ActionExecutor {
                     @Override
                     public void success(ActionInvocation invocation) {
                         assert invocation.getOutput().length == 0;
-                        System.out.println("Successfully called set action!");
+                        System.out.println("Successfully called action increaseTemperature");
                     }
 
                     @Override
@@ -74,7 +74,7 @@ public class ActionExecutor {
         );
     }
 
-    public void decreaseTemperature(UpnpService upnpService, Service service) {
+    synchronized public void decreaseTemperature(UpnpService upnpService, Service service) {
         ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction(Constants.DECREASE_TEMPERATURE));
         upnpService.getControlPoint().execute(
                 new ActionCallback(getTargetInvocation) {
@@ -82,7 +82,7 @@ public class ActionExecutor {
                     @Override
                     public void success(ActionInvocation invocation) {
                         assert invocation.getOutput().length == 0;
-                        System.out.println("Successfully called set action!");
+                        System.out.println("Successfully called action decreaseTemperature");
                     }
 
                     @Override

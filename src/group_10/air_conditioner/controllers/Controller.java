@@ -225,6 +225,7 @@ public class Controller implements ControllerInterface {
         return true;
     }
 
+    @Override
     public boolean setTemperature(int value) {
         Service service = getServiceById(device, Constants.TEMPERATURE_CONTROL);
         if (service != null) {

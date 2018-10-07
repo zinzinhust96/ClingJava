@@ -48,6 +48,9 @@ public class View implements Initializable, ViewInterface {
             drawButton.draw(powerBtn, "power.png", 80, 80);
             isDeviceOn = true;
             controller.setPowerStatus(true);
+            int temp = airConditioner.getTemperture();
+            controller.setTemperature(temp);
+            System.out.println("Current temperature: " + temp);
         }
     }
 
@@ -56,9 +59,11 @@ public class View implements Initializable, ViewInterface {
         int temp = airConditioner.getTemperture();
         if (temp < Constants.TEMPERATURE_MAX) {
             temp += 1;
-            System.out.println("Current temperature: " + temp);
+            if (isDeviceOn) {
+                System.out.println("Current temperature: " + temp);
+                controller.setTemperature(temp);
+            }
             airConditioner.setTemperture(temp);
-            controller.increaseTemperature();
         } else {
             System.out.println("At maximum value");
         }
@@ -70,9 +75,11 @@ public class View implements Initializable, ViewInterface {
         int temp = airConditioner.getTemperture();
         if (temp > Constants.TEMPERATURE_MIN) {
             temp -= 1;
-            System.out.println("Current temperature: " + temp);
+            if (isDeviceOn) {
+                System.out.println("Current temperature: " + temp);
+                controller.setTemperature(temp);
+            }
             airConditioner.setTemperture(temp);
-            controller.decreaseTemperature();
         } else {
             System.out.println("At minimum value");
         }
