@@ -42,12 +42,12 @@ public class View implements Initializable, ViewInterface {
         DrawButton drawButton = new DrawButton();
         if (isDeviceOn) {
             drawButton.draw(powerBtn, "power_off.png", 80, 80);
-            controller.setPowerStatus(false);
+            controller.setPowerStatus(Constants.AC_DEVICE_TYPE, false, Constants.TEMPERATURE_CONTROL);
             isDeviceOn = false;
         } else {
             drawButton.draw(powerBtn, "power.png", 80, 80);
             isDeviceOn = true;
-            controller.setPowerStatus(true);
+            controller.setPowerStatus(Constants.AC_DEVICE_TYPE,true, Constants.TEMPERATURE_CONTROL);
             int temp = airConditioner.getTemperture();
             controller.setTemperature(temp);
             System.out.println("Current temperature: " + temp);

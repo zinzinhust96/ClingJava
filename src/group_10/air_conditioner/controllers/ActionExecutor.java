@@ -93,4 +93,63 @@ public class ActionExecutor {
         );
     }
 
+    synchronized public void setIntensity(UpnpService upnpService, Service service, int value) {
+        ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction("SetIntensity"));
+        getTargetInvocation.setInput("In", value);
+        upnpService.getControlPoint().execute(
+                new ActionCallback(getTargetInvocation) {
+
+                    @Override
+                    public void success(ActionInvocation invocation) {
+                        assert invocation.getOutput().length == 0;
+                        System.out.println("Successfully called action setIntensity");
+                    }
+
+                    @Override
+                    public void failure(ActionInvocation invocation, UpnpResponse operation, String defaultMsg) {
+                        System.err.println(defaultMsg);
+                    }
+                }
+        );
+    }
+
+    synchronized public void increaseIntensity(UpnpService upnpService, Service service) {
+        ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction("IncreaseIntensity"));
+        upnpService.getControlPoint().execute(
+                new ActionCallback(getTargetInvocation) {
+
+                    @Override
+                    public void success(ActionInvocation invocation) {
+                        assert invocation.getOutput().length == 0;
+                        System.out.println("Successfully called action IncreaseIntensity");
+                    }
+
+                    @Override
+                    public void failure(ActionInvocation invocation, UpnpResponse operation, String defaultMsg) {
+                        System.err.println(defaultMsg);
+                    }
+                }
+        );
+    }
+
+    synchronized public void decreaseIntensity(UpnpService upnpService, Service service) {
+        ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction("DecreaseIntensity"));
+        upnpService.getControlPoint().execute(
+                new ActionCallback(getTargetInvocation) {
+
+                    @Override
+                    public void success(ActionInvocation invocation) {
+                        assert invocation.getOutput().length == 0;
+                        System.out.println("Successfully called action DecreaseIntensity");
+                    }
+
+                    @Override
+                    public void failure(ActionInvocation invocation, UpnpResponse operation, String defaultMsg) {
+                        System.err.println(defaultMsg);
+                    }
+                }
+        );
+    }
+
+
 }
