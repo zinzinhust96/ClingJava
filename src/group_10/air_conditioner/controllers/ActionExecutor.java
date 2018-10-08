@@ -94,8 +94,8 @@ public class ActionExecutor {
     }
 
     synchronized public void setIntensity(UpnpService upnpService, Service service, int value) {
-        ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction("SetIntensity"));
-        getTargetInvocation.setInput("In", value);
+        ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction(Constants.SET_INTENSITY));
+        getTargetInvocation.setInput(Constants.IN, value);
         upnpService.getControlPoint().execute(
                 new ActionCallback(getTargetInvocation) {
 
@@ -114,7 +114,7 @@ public class ActionExecutor {
     }
 
     synchronized public void increaseIntensity(UpnpService upnpService, Service service) {
-        ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction("IncreaseIntensity"));
+        ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction(Constants.INCREASE_INTENSITY));
         upnpService.getControlPoint().execute(
                 new ActionCallback(getTargetInvocation) {
 
@@ -133,7 +133,7 @@ public class ActionExecutor {
     }
 
     synchronized public void decreaseIntensity(UpnpService upnpService, Service service) {
-        ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction("DecreaseIntensity"));
+        ActionInvocation getTargetInvocation = new ActionInvocation(service.getAction(Constants.DECREASE_INTENSITY));
         upnpService.getControlPoint().execute(
                 new ActionCallback(getTargetInvocation) {
 

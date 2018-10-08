@@ -193,7 +193,7 @@ public class Controller implements ControllerInterface {
                 }
                 if (values.containsKey(Constants.STATUS)) {
                     boolean value = (boolean) values.get(Constants.STATUS).getValue();
-                    view.onPowerStatusChange(value);
+                    view.onPowerStatusChange(Constants.AC_DEVICE_TYPE, value);
                     System.out.println("New value: " + value);
                 }
             }
@@ -232,12 +232,12 @@ public class Controller implements ControllerInterface {
                 }
                 if (values.containsKey(Constants.INTENSITY)) {
                     int value = (int) values.get(Constants.INTENSITY).getValue();
-                    view.onTemperatureChange(value);
+                    view.onIntensityChange(value);
                     System.out.println("New value: " + value);
                 }
                 if (values.containsKey(Constants.STATUS)) {
                     boolean value = (boolean) values.get(Constants.STATUS).getValue();
-                    view.onPowerStatusChange(value);
+                    view.onPowerStatusChange(Constants.LIGHT_DEVICE_TYPE, value);
                     System.out.println("New value: " + value);
                 }
             }
@@ -256,8 +256,7 @@ public class Controller implements ControllerInterface {
             if (service != null) {
                 actionExecutor.setPowerStatus(upnpService, service, status);
             }
-        }
-        if (type.equals(Constants.LIGHT_DEVICE_TYPE)) {
+        } else {
             Service service = getServiceById(light, serviceId);
             if (service != null) {
                 actionExecutor.setPowerStatus(upnpService, service, status);

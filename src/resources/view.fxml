@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group_10.air_conditioner.views.View">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group_10.air_conditioner.views.View">
    <top>
       <AnchorPane prefHeight="119.0" prefWidth="200.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
          <children>
@@ -17,14 +17,24 @@
                </font>
             </Label>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="109.0" layoutX="7.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" width="187.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="109.0" layoutX="210.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" width="187.0" />
+            <Label fx:id="intensityLb" alignment="CENTER" layoutX="304.0" layoutY="20.0" prefHeight="80.0" prefWidth="81.0" text="Label" textAlignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="lightImage" fitHeight="61.0" fitWidth="60.0" layoutX="232.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
          </children></AnchorPane>
    </top>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="powerBtn" fitHeight="80.0" fitWidth="80.0" layoutX="60.0" layoutY="14.0" onMouseClicked="#poweroff" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="upBtn" fitHeight="80.0" fitWidth="80.0" layoutX="61.0" layoutY="117.0" onMouseClicked="#upTemperature" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="downBtn" fitHeight="80.0" fitWidth="80.0" layoutX="61.0" layoutY="197.0" onMouseClicked="#downTemperature" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="acPowerBtn" fitHeight="80.0" fitWidth="80.0" layoutX="60.0" layoutY="14.0" onMouseClicked="#acPowerButton" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="acUpBtn" fitHeight="80.0" fitWidth="80.0" layoutX="61.0" layoutY="117.0" onMouseClicked="#upTemperature" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="acDownBtn" fitHeight="80.0" fitWidth="80.0" layoutX="61.0" layoutY="197.0" onMouseClicked="#downTemperature" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="lightPowerBtn" fitHeight="80.0" fitWidth="80.0" layoutX="273.0" layoutY="14.0" onMouseClicked="#lightPowerButton" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="lightUpBtn" fitHeight="80.0" fitWidth="80.0" layoutX="273.0" layoutY="117.0" onMouseClicked="#upIntensity" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="lightDownBtn" fitHeight="80.0" fitWidth="80.0" layoutX="273.0" layoutY="197.0" onMouseClicked="#downIntensity" pickOnBounds="true" preserveRatio="true" />
          </children></AnchorPane>
    </center>
 </BorderPane>

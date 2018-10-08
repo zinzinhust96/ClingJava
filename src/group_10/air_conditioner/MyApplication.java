@@ -22,8 +22,8 @@ public class MyApplication extends Application{
         ControllerInterface controller = new Controller(view);
         view.setController(controller);
 
-        primaryStage.setTitle("Air Conditioner");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setTitle("Remote");
+        primaryStage.setScene(new Scene(root, 400, 400));
         primaryStage.setResizable(false);
         primaryStage.show();
     }

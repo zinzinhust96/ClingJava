@@ -34,6 +34,16 @@ public class LightControl {
         return propertyChangeSupport;
     }
 
+    @UpnpAction
+    public void setTarget(@UpnpInputArgument(name = Constants.NEW_TARGET_VALUE) boolean newTargetValue) {
+
+        boolean targetOldValue = target;
+        target = newTargetValue;
+        boolean statusOldValue = status;
+        status = newTargetValue;
+        getPropertyChangeSupport().firePropertyChange(Constants.STATUS, null, null);
+    }
+
     @UpnpAction(out = @UpnpOutputArgument(name = Constants.RET_TARGET_VALUE))
     public boolean getTarget() {
         return target;
