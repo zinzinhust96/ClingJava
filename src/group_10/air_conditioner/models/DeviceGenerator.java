@@ -68,7 +68,7 @@ public class DeviceGenerator {
         DeviceIdentity identity = new DeviceIdentity(UDN.uniqueSystemIdentifier(id));
         DeviceType type = new UDADeviceType(typeName, version);
         DeviceDetails details = new DeviceDetails(friendlyName, new ManufacturerDetails(manufacturer), new ModelDetails(modelName, description, modelNumber));
-        Icon icon = new Icon("image/png", 48, 48, 8, getClass().getResource(image));
+        Icon icon = new Icon("image/png", 48, 48, 8, "Light", getClass().getResourceAsStream(image));
 
         LocalService deviceService = new AnnotationLocalServiceBinder().read(service);
         deviceService.setManager(new DefaultServiceManager(deviceService, service));

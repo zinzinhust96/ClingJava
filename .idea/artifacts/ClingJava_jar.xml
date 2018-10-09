@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ClingJava:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ClingJava_jar</output-path>
+    <root id="archive" name="ClingJava.jar">
+      <element id="module-output" name="ClingJava" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/seamless-http-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/cling-core-2.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/seamless-util-1.1.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
